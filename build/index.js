@@ -334,29 +334,34 @@
 
       <ol>
         <li>
-          <code
-            >${ue("to(path: string, options?: { willStateChange?: boolean }): Promise<void>")}</code
-          >
+          <code class="inline-block">
+            ${ue("to(path: string, options?: { willStateChange?: boolean }): Promise<void>")}
+          </code>
           - Renders needed page. In some rare situations
           <b>window.history</b> does not need to be updated. In such cases
           provide object with <em>willStateChange</em> property setted to
           <i>false</i> as second parameter.
         </li>
+
         <li>
-          <code>${ue("reload(): Promise<void>")}</code> - Reloads
-          current page.
+          <code class="inline-block">
+            ${ue("reload(): Promise<void>")}
+          </code>
+          - Reloads current page.
         </li>
         <li>
-          <code>${ue("back(): void")}</code> - return to previous
-          page.
+          <code class="inline-block">${ue("back(): void")}</code> -
+          return to previous page.
         </li>
         <li>
-          <code>${ue("forward(): void")}</code> - forwards to next
-          page if it is in history.
+          <code class="inline-block">${ue("forward(): void")}</code> -
+          forwards to next page if it is in history.
         </li>
         <li>
-          <code>${ue("add(routes: Route | Route[]): void")}</code> -
-          add routes to Router. May be called many times.
+          <code class="inline-block">
+            ${ue("add(routes: Route | Route[]): void")}
+          </code>
+          - add routes to Router. May be called many times.
         </li>
       </ol>
 
@@ -496,18 +501,22 @@
 
       <ol>
         <li>
-          <code
-            >${ue("setLanguage(tag: string): Promise<void>")}</code
-          >
+          <code class="inline-block">
+            ${ue("setLanguage(tag: string): Promise<void>")}
+          </code>
           - change language on site. Reactively changes language on site.
         </li>
+        
         <li>
-          <code
-            >${ue("translate(path: string, variables?: { [string]: string }): string")}</code
-          >
-          - returns translated text for current language. <b>path</b> is string
-          that provide path to text as object keys limited by dot and optional
-          <b>variables</b> is object that pass variables into translated text.
+          <p>
+            <code class="inline-block">
+              ${ue("translate(path: string, variables?: { [string]: string }): string")}
+            </code>
+            - returns translated text for current language. <b>path</b> is
+            string that provide path to text as object keys limited by dot and
+            optional <b>variables</b> is object that pass variables into
+            translated text.
+          </p>
 
           <code class="typescript">
             ${ue("I18n.translate('home.menu.about');")}
@@ -519,7 +528,7 @@
           </p>
 
           <code>
-            ${ue("\n          const en = {\n          =:  greeting: 'Hello, ${name}!',\n          };\n        ")}
+            ${ue("const en = {\n              =:  greeting: 'Hello, ${name}!',\n              };\n              ")}
           </code>
 
           <p>And then provide variable <i>name</i>:</p>
@@ -541,9 +550,9 @@
         </li>
 
         <li>
-          <code
-            >${ue("add(languages: I18nLanguagesSet, initial?: string): void")}</code
-          >
+          <code class="inline-block">
+            ${ue("add(languages: I18nLanguagesSet, initial?: string): void")}
+          </code>
           <p>
             - add languages set to <strong>I18n</strong> object.
             <i>initial</i> is a optional tag that, if provided, will be used as
@@ -561,13 +570,13 @@
 
       <ol>
         <li>
-          <code class="typescript">
+          <code class="typescript inline-block">
             ${ue("languagesTags: Array<string>")}
           </code>
           - returns all tags for languages, that you set to I18n.add method.
         </li>
         <li>
-          <code class="typescript">
+          <code class="typescript inline-block">
             ${ue("currentLanguage: string | undefined")}
           </code>
           - returns tag of current language or undefined if there is not setted
@@ -586,14 +595,14 @@
 
       <ol>
         <li>
-          <code class="typescript">
+          <code class="typescript inline-block">
             ${ue("static get cssRootFolder(): string")}
           </code>
           - returns css root folder.
         </li>
-        
+
         <li>
-          <code class="typescript">
+          <code class="typescript inline-block">
             ${ue("static set cssRootFolder(dir: string): void")}
           </code>
           - change css root folder.
