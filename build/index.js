@@ -48,7 +48,12 @@
       <p>
         For easier creation of edelweiss powered apps, use
         <strong>Edelweiss CLI</strong>. More info about using CLI
-        <a href="https://github.com/YevhenKap/edelweiss-cli">here</a>.
+        <button
+          class="link"
+          @click=${()=>se.to("/docs-cli").then(()=>ue.UI.activeButtonId="cli")}
+        >
+          <strong>here</strong></button
+        >.
       </p>
     `},html:{title:"# HTML",content:U`
       <p>
